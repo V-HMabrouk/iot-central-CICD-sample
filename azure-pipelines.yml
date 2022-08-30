@@ -1,0 +1,14 @@
+trigger:
+- master
+variables:
+- group: keyvault
+- name: buildConfiguration
+  value: 'Release'
+steps:
+- task: PowerShell@2
+  displayName: 'IoT Central'
+  inputs:
+    filePath: 'PowerShell/IoTC-Task.ps1'
+    arguments: '-ApiToken "$(API-Token)" -ConfigPath "Config/Production/IoTC Configuration" -AppName "iotc-production" -ServicePrincipalPassword (ConvertTo-SecureString "$(SP-Password)" -AsPlainText -Force) -AppId "ad04eb5b-68de-4545-b7a2-ab054dd81a59" -KeyVault "kv-iotc-production" -TenantId "72f988bf-86f1-41af-91ab-2d7cd011db47"'
+    pwsh: true
+    failOnStderr:  true
