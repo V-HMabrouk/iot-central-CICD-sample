@@ -1,0 +1,93 @@
+{
+  "APITokens": {
+    "value": [
+      {
+        "id": "dev-admin",
+        "roles": [
+          {
+            "role": "ca310b8d-2f4a-44e0-a36e-957c202cd8d4"
+          }
+        ],
+        "expiry": "2023-05-31T10:47:08.53Z"
+      }
+    ]
+  },
+  "data exports": {
+    "value": [
+      {
+        "id": "5ad278d6-e22b-4749-803d-db1a8a2b8529",
+        "displayName": "All telemetry to blob storage",
+        "enabled": false,
+        "source": "telemetry",
+        "destinations": [
+          {
+            "id": "393adfc9-0ed8-45f4-aa29-25b5c96ecf63"
+          }
+        ],
+        "status": "notStarted"
+      }
+    ]
+  },
+  "device groups": {
+    "value": [
+      {
+        "id": "66f41d29-832d-4a12-9e9d-18932bee3141",
+        "displayName": "MXCHIP Getting Started Guide - All devices"
+      },
+      {
+        "id": "494dc749-0963-4ec1-89ff-e1de2228e750",
+        "displayName": "RS40 Occupancy Sensor - All devices"
+      },
+      {
+        "id": "dd87877d-9465-410b-947e-64167a7a1c39",
+        "displayName": "Cascade 500 - All devices"
+      },
+      {
+        "id": "91ceac5b-f98d-4df0-9ed6-5465854e7d9e",
+        "displayName": "Simulated devices"
+      }
+    ]
+  },
+  "organizations": {
+    "value": []
+  },
+  "roles": {
+    "value": [
+      {
+        "id": "344138e9-8de4-4497-8c54-5237e96d6aaf",
+        "displayName": "Builder"
+      },
+      {
+        "id": "ca310b8d-2f4a-44e0-a36e-957c202cd8d4",
+        "displayName": "Administrator"
+      },
+      {
+        "id": "ae2c9854-393b-4f97-8c42-479d70ce626e",
+        "displayName": "Operator"
+      }
+    ]
+  },
+  "destinations": {
+    "value": [
+      {
+        "id": "393adfc9-0ed8-45f4-aa29-25b5c96ecf63",
+        "displayName": "Blob destination",
+        "type": "blobstorage@v1",
+        "authorization": {
+          "type": "connectionString",
+          "connectionString": "DefaultEndpointsProtocol=https;AccountName=yourexportaccount;AccountKey=*****;EndpointSuffix=core.windows.net",
+          "containerName": "dataexport"
+        },
+        "status": "waiting"
+      }
+    ]
+  },
+  "file uploads": {
+    "connectionString": "FileUpload",
+    "container": "fileupload",
+    "sasTtl": "PT1H"
+  },
+  "jobs": {
+    "value": []
+  }
+}
