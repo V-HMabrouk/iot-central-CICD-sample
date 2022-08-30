@@ -1,7 +1,7 @@
 trigger:
 - master
 variables:
-- group: keyvault
+- group: iotc-producttruth
 - name: buildConfiguration
   value: 'Release'
 steps:
